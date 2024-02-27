@@ -50,7 +50,6 @@ document.addEventListener('DOMContentLoaded', function () {
         options.style.display = options.style.display === 'block' ? 'none' : 'block';
     }
 
-
     // Function to toggle dark mode
     function toggleDarkMode() {
         const body = document.body; // Obtém a referência ao elemento <body> do documento
@@ -65,7 +64,6 @@ document.addEventListener('DOMContentLoaded', function () {
     
     // Event listeners for dark mode buttons
     document.querySelector('.darkModeBtn').addEventListener('click', toggleDarkMode);
-    //document.getElementById('lightModeBtn').addEventListener('click', toggleDarkMode);
 
     window.addEventListener('load', () => {
         const theme = localStorage.getItem('theme');
@@ -121,5 +119,4 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     }); 
    
-
 });

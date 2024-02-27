@@ -32,60 +32,56 @@ document.addEventListener('DOMContentLoaded', function () {
         options.style.display = options.style.display === 'block' ? 'none' : 'block';
     }
 
-
     // Function to toggle dark mode
     function toggleDarkMode() {
         const body = document.body; // Obtém a referência ao elemento <body> do documento
-        body.classList.toggle('dark_mode');  // Alterna a classe 'dark_mode' no elemento <body>
+        body.classList.toggle('dark_mode');  // Alterna a classe 'dark_mode' no elemento <body> puxando do css
         const theme = body.classList.contains('dark_mode') ? 'dark' : 'light'; // Verifica se a classe 'dark_mode' está presente no elemento <body> e define o tema (theme) com base nisso
         localStorage.setItem('theme', theme); // Salva a preferência do usuário para o tema no armazenamento local
     
         // Atualiza o texto do botão de acordo com o tema atual
         var darkModeBtn = document.querySelector('.darkModeBtn');
-        darkModeBtn.textContent = body.classList.contains('dark_mode') ? 'Modo Claro' : 'Modo Escuro';
+        darkModeBtn.textContent = body.classList.contains('dark_mode') ? 'Modo Claro' : 'Modo Escuro'; //textContent está manipulando o conteúdo textual do elemento que foi selecionado
     }
     
     // Event listeners for dark mode buttons
     document.querySelector('.darkModeBtn').addEventListener('click', toggleDarkMode);
-    //document.getElementById('lightModeBtn').addEventListener('click', toggleDarkMode);
 
-    window.addEventListener('load', () => {
-        const theme = localStorage.getItem('theme');
+    window.addEventListener('load', () => { // Quando a página está completamente carregada, este código é executado.
+        const theme = localStorage.getItem('theme'); // Recupera a preferência do usuário para o tema do armazenamento local
 
         if (theme === 'dark') {
-            document.body.classList.add('dark_mode');
+            document.body.classList.add('dark_mode'); // Se a preferência for 'dark', adiciona a classe 'dark_mode' ao elemento <body>
         }
     });
 
     // -------------------------- BOTOES DE TAMANHOS DA FONTE ----------------------------
 
-    var fontIncreaseBtn = document.querySelector('.fontIncreaseBtn');
+    var fontIncreaseBtn = document.querySelector('.fontIncreaseBtn'); // querySelector é utilizado para selecionar os elementos do DOM que possuem as respectivas classes
     var fontDecreaseBtn = document.querySelector('.fontDecreaseBtn');
 
     fontIncreaseBtn.addEventListener('click', fontIncrease);
     fontDecreaseBtn.addEventListener('click', fontDecrease);
 
     function fontIncrease() {
-        document.body.classList.add('body-increase-font');
+        document.body.classList.add('body-increase-font'); // adiciona uma classe (body-increase-font) ao elemento <body>
         document.body.classList.remove('body-decrease-font');
-        localStorage.setItem('fontSize', 'increase');
+        localStorage.setItem('fontSize', 'increase'); // O armazenamento local é uma maneira de armazenar pares chave-valor, onde as chaves e valores são sempre armazenados como strings.
     }
     
-    // Function to decrease font size
     function fontDecrease() {
         document.body.classList.add('body-decrease-font');
         document.body.classList.remove('body-increase-font');
-        localStorage.setItem('fontSize', 'decrease');
+        localStorage.setItem('fontSize', 'decrease'); //armazena a preferência do usuário no armazenamento local como 'decrease'.
     }
 
-    // Check for user preference on page load
     window.addEventListener('load', () => {
         const fontSizePreference = localStorage.getItem('fontSize');
 
         if (fontSizePreference === 'increase') {
-            fontIncrease(); // Apply larger font size
+            fontIncrease(); 
         } else if (fontSizePreference === 'decrease') {
-            fontDecrease(); // Apply smaller font size
+            fontDecrease(); 
         }
     }); 
 

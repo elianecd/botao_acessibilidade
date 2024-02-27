@@ -356,7 +356,6 @@ body.dark_mode {
     background-color: #0171d3; /* Dark background color for accessibility options */
 }
 
-
 .dark_mode a.google span,
 .dark_mode .accessibility_options button, /* Light text color for accessibility options buttons */
 .dark_mode .google span, /* Light text color for Google login button text */
@@ -369,7 +368,6 @@ body.dark_mode {
     color: white;
 }
 
-/* Increase font size */
 .body-increase-font header,
 .body-increase-font .form_link,
 .body-increase-font .form_link span,
@@ -381,11 +379,10 @@ body.dark_mode {
 .body-increase-font .field button,
 .body-increase-font .custom-dropdown select,
 .body-increase-font .cancel-button {
-    font-size: 20px; /* Adjust the font size as needed */
+    font-size: 20px; 
     margin-bottom: 0;
 }
 
-/* Decrease font size */
 .body-decrease-font header,
 .body-decrease-font .form_link,
 .body-decrease-font .form_link span,
@@ -397,7 +394,7 @@ body.dark_mode {
 .body-decrease-font .field button,
 .body-decrease-font .custom-dropdown select,
 .body-decrease-font .cancel-button {
-    font-size: 12px; /* Adjust the font size as needed */
+    font-size: 12px; 
 }
 
 .body-decrease-font .cancel-button{
