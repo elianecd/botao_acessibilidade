@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en, pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro</title>
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    />
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- Boxicons CSS -->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+    <!-- JavaScript -->
+    <script src="js/script-signup.js"></script>
+</head>
+
+<body>
+    <section class="container forms">
+
+        <!-- Accessibility Button -->
+        <div class="accessibility_btn" title="Acessibilidade">
+            <i class="bi bi-universal-access-circle"></i>
+        </div>
+
+        <!-- Accessibility Options -->
+        <div class="accessibility_options">
+            <button class="darkModeBtn">Modo Escuro</button>
+            <button class="fontIncreaseBtn">Aumentar Fonte</button>
+            <button class="fontDecreaseBtn">Diminuir Fonte</button>
+        </div>
+
+        <div class="form signup">
+            <div class="form-content">
+                <header>Cadastro</header>
+
+                <form action="#">
+                    <div class="field input-field">
+                        <input type="text" placeholder="Nome*" class="input" required>
+                    </div>
+
+                    <div class="field input-field">
+                        <input type="text" placeholder="Sobrenome*" class="input" required>
+                    </div>
+
+                    <div class="field input-field">
+                        <input type="text" placeholder="CPF*" pattern="\d{3}\.?\d{3}\.?\d{3}-?\d{2}" class="input" required>
+                    </div>
+
+                    <div class="field input-field">
+                        <input type="text" placeholder="Endereço*" class="input" required>
+                    </div>
+
+                    <div class="field input-field date-input-container">
+                        <h5>Data de Nascimento*</h5>
+                        <input type="date" style="color: #777777;" placeholder="Data de Nascimento" class="input" required>
+                    </div>                    
+
+                    <div><br></div>
+
+                    <div class="field input-field">
+                        <input type="email" placeholder="Seu melhor email*" class="input" required>
+                    </div>
+
+                    <div><br></div>
+
+                    <div class="custom-dropdown">
+                        <select name="marital_status" id="marital_status">
+                            <option value=""> Selecione seu Status Civil </option>
+                            <option value="Solteiro">Solteiro</option>
+                            <option value="Casado">Casado</option>
+                            <option value="Viúvo">Viúvo</option>
+                            <option value="Divorciado">Divorciado</option>
+                        </select>
+                    </div>
+                    
+                    <div class="custom-dropdown">
+                        <select name="education" id="education">
+                            <option value=""> Selecione seu nível escolar </option>
+                            <option value="Ensino Fundamental">Ensino Fundamental</option>
+                            <option value="Ensino Medio">Ensino Medio</option>
+                            <option value="Ensino Superior">Ensino Superior</option>
+                            <option value="Ensino Fundamental Incompleto">Ensino Fundamental Incompleto</option>
+                            <option value="Ensino Medio Incompleto">Ensino Medio Incompleto</option>
+                            <option value="Ensino Superior Incompleto">Ensino Superior Incompleto</option>
+                        </select>
+                    </div>                    
+
+                    <div class="field input-field">
+                        <input type="password" placeholder="Senha*" class="password" required>
+                        <i class='bx bx-hide eye-icon'></i>
+                    </div>
+
+                    <div class="field input-field">
+                        <input type="password" placeholder="Confirme sua Senha*" class="password" required>
+                        <i class='bx bx-hide eye-icon'></i>
+                    </div>
+
+                    <div class="field button-field">
+                        <button>Registrar</button>
+                    </div>
+
+                    <div class="field button-field">
+                        <a href="index.html" class="button cancel-button">Cancelar</a>
+                    </div>                                      
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- BootStrap JS-->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- Script for Dark Mode-->
+    <script src="https://cdn.jsdelivr.net/npm/darkmode-js@1.5.7/lib/darkmode-js.min.js"></script>
+</body>
+</html>

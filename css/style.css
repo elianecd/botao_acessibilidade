@@ -1,0 +1,454 @@
+/* Google Fonts - Poppins */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+.container{ /* pagina toda */
+    height: auto;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 50px;
+    margin: auto; /*torna o container responsivo*/
+}
+
+.form{ /* quadrado branco do formulario */
+    position: relative;
+    max-width: 430px;
+    width: 100%;
+    padding: 30px;
+    border-radius: 6px;
+    background: #FFF;
+    box-sizing: border-box;
+    height: auto; /*torna o quadrado responsivo*/
+    margin: auto; /*torna o quadrado responsivo*/
+}
+
+.forms.show-signup .form.signup {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.forms.show-signup .form.login {
+    opacity: 0;
+    pointer-events: none;
+}
+
+header{ /* login e cadastro*/
+    font-size: 28px;
+    font-weight: 600;
+    color: #232836;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+form{
+    margin-top: 30px;
+}
+
+.form .field{ /* quadrado do google */
+    position: relative;
+    height: 50px;
+    width: 100%;
+    margin-top: 20px;
+    border-radius: 6px;
+}
+
+.field {
+    position: relative;
+    height: 50px;
+    width: 100%;
+    margin-top: 20px;
+    border-radius: 6px;
+}
+
+.field input, /* quadrados do usuario e senha */
+.field button{
+    height: 100%;
+    width: 100%;
+    border: none;
+    font-size: 16px;
+    font-weight: 400;
+    border-radius: 6px;
+}
+
+.field input{ /* bordas dos quadrados do usuario e senha */
+    outline: none;
+    padding: 0 15px;
+    border: 1px solid#cacaca;
+}
+
+.field input:focus{
+    border-bottom-width: 2px;
+}
+
+.eye-icon{
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+    font-size: 18px;
+    color: #8b8b8b;
+    cursor: pointer;
+    padding: 5px;
+}
+
+.field button{
+    color: #FFF;
+    background-color: #016dcb;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.field button:hover{
+    color: #000000;
+    background-color: #ffc000;
+}
+
+.form_link{
+    text-align: center;
+    margin-top: 10px;
+}
+
+.form_link span,
+.form_link a{
+    font-size: 14px;
+    font-weight: 400;
+    color: #232836;
+}
+
+.form a{
+    text-decoration: none;
+}
+
+.form_content a:hover{
+    color: #0171d3;
+    text-decoration: underline;
+}
+
+.line{
+    position: relative;
+    height: 1px;
+    width: 100%;
+    margin: 36px 0;
+    background-color: #d4d4d4;
+}
+
+.line::before{
+    content: 'Ou';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #FFF;
+    color: #8b8b8b;
+    padding: 0 15px;
+}
+
+.media_options a{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+img.google-img{
+    position: absolute;
+    top: 50%;
+    left: 2%;
+    transform: translateY(-50%);
+    height: 30px;
+    width: 30px;
+    object-fit: cover;
+}
+
+a.google{
+    border: 1px solid #cacaca;
+}
+
+a.google span{
+    font-weight: 500;
+    opacity: 0.6;
+    color: #232836;
+}
+
+.custom-dropdown {
+    width: 100%;
+    position: relative;
+}
+
+.custom-dropdown select {
+    height: 100%;
+    width: 100%;
+    border: none;
+    font-size: 16px;
+    font-weight: 400;
+    border-radius: 6px;
+    outline: none;
+    padding: 10px;
+    border: 1px solid #cacaca;
+    cursor: pointer;
+    background-color: #FFF;
+    color: #777777;
+}
+
+.custom-dropdown select:focus {
+    border-color: #0171d3;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+    color: #000000;
+}
+
+/* espaço entre os dropdowns */
+.custom-dropdown + .custom-dropdown {
+    margin-top: 20px;
+}
+
+h5{
+    color: #777777;
+    text-align: -webkit-auto;
+    font-size: small;
+}
+
+.cancel-button {
+    color: #FFF;
+    background-color: #016dcb;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    display: inline-block;
+    height: 100%;
+    width: 100%;
+    border: none;
+    font-size: 16px;
+    font-weight: 400;
+    padding: 12px;
+    border-radius: 6px;
+    text-decoration: none;
+    text-align: center;
+    box-sizing: border-box;
+}
+
+.cancel-button:hover {
+    color: #000000;
+    background-color: #ffc000;
+    text-decoration: none;
+}
+
+.field input[type="date"] {
+    height: 100%;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 25px 10px; /* Adjust the padding to your preference */
+    border: 1px solid #cacaca;
+    border-radius: 6px;
+    outline: none;
+    background-color: #FFF;
+    color: #777777;
+    margin: auto; /* Center the input in the field */
+    
+}
+
+.field input[type="date"]:focus {
+    border-color: #0171d3;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+    color: #000000;
+}
+
+.accessibility_btn {
+    position: fixed;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: #0171d3;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    z-index: 999;
+}
+
+.accessibility_btn i {
+    font-size: 30px; /* Adjust the font size to make the icon bigger */
+    color: #ffffff;
+}
+
+.accessibility_options {
+    position: fixed;
+    right: 80px;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: #0171d3;
+    border-radius: 6px;
+    padding: 10px;
+    display: none;
+    z-index: 999;
+    
+}
+
+.accessibility_options button {
+    display: block;
+    margin-bottom: 5px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    color: #ffffff;
+}
+
+.accessibility_btn:hover::after { /* Adicione pseudo-elemento ::after */
+    content: "Acessibilidade"; /* Texto a ser exibido */
+    position: fixed;
+    right: 50%;
+    top: 20px;
+    right: calc(100% + 10px); /* Posição horizontal do texto */
+    transform: translateY(-50%);
+    background-color: #0171d3; /* Cor de fundo */
+    color: #fff; /* Cor do texto */
+    padding: 5px; /* Espaçamento interno */
+    border-radius: 5px; /* Borda arredondada */
+    font-size: 14px; /* Tamanho da fonte */
+    z-index: 999; /* Z-index maior para aparecer acima de outros elementos */
+}
+
+.accessibility_options button {
+    padding: 5px 10px;
+    font-size: 14px;
+    border-radius: 5px;
+   
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.accessibility_options button:hover {
+    background-color: #0056b3;
+}
+
+.accessibility_options button:focus,
+.accessibility_options button:active {
+    outline: none;
+    box-shadow: none;
+}
+
+body.dark_mode {
+    background-color: #1a1a1a; /* Dark background color */
+    color: #fff; /* Light text color */
+}
+
+.dark_mode html {
+    background-color: #1a1a1a; /* Dark background color for HTML */
+}
+
+.dark_mode .form {
+    background-color: #333333; /* Dark background color for the form */
+    color: #fff; /* Light text color for the form */
+    border-color: #666666; /* Dark border color for the form */
+}
+
+.dark_mode .accessibility_options {
+    background-color: #0171d3; /* Dark background color for accessibility options */
+}
+
+
+.dark_mode a.google span,
+.dark_mode .accessibility_options button, /* Light text color for accessibility options buttons */
+.dark_mode .google span, /* Light text color for Google login button text */
+.dark_mode header,
+.dark_mode .form_link,
+.dark_mode .form_link span,
+.dark_mode .signup_link,
+.dark_mode .forgot-pass,
+.dark_mode h5{
+    color: white;
+}
+
+/* Increase font size */
+.body-increase-font header,
+.body-increase-font .form_link,
+.body-increase-font .form_link span,
+.body-increase-font .signup_link,
+.body-increase-font .forgot-pass,
+.body-increase-font h5,
+.body-increase-font .input,
+.body-increase-font .password,
+.body-increase-font .field button,
+.body-increase-font .custom-dropdown select,
+.body-increase-font .cancel-button {
+    font-size: 20px; /* Adjust the font size as needed */
+    margin-bottom: 0;
+}
+
+/* Decrease font size */
+.body-decrease-font header,
+.body-decrease-font .form_link,
+.body-decrease-font .form_link span,
+.body-decrease-font .signup_link,
+.body-decrease-font .forgot-pass,
+.body-decrease-font h5,
+.body-decrease-font .input,
+.body-decrease-font .password,
+.body-decrease-font .field button,
+.body-decrease-font .custom-dropdown select,
+.body-decrease-font .cancel-button {
+    font-size: 12px; /* Adjust the font size as needed */
+}
+
+.body-decrease-font .cancel-button{
+    padding: 15px;
+}
+
+.body-increase-font .cancel-button{
+    padding: 8px;
+}
+
+/* para tela responsiva */
+@media screen and (max-width: 600px) {
+    .container {
+        padding: 15px;
+    }
+
+    header {
+        font-size: 20px;
+        margin-bottom: 15px;
+    }
+
+    .form {
+        max-width: 100%;
+        padding: 15px;
+        overflow: auto;
+        box-sizing: border-box;
+        height: auto;
+    }
+
+    .field {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        margin-top: 10px;
+    }
+
+    .field input,
+    .field select,
+    .field button {
+        width: 100%;
+        box-sizing: border-box;
+        height: 100%;
+        margin: auto;
+    }
+
+    .cancel-button {
+        padding: 12px;
+        display:block;
+        text-decoration: none;
+        text-align: center;
+    }
+}
+
+  
